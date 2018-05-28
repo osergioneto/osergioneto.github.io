@@ -277,6 +277,37 @@ body {
   padding-left: 1vw;
 }
 
+.container-contato{
+  color: #FFF;
+}
+.container-contato a img, p{
+  display: inline-block;
+}
+.container-contato a{
+  text-decoration: none;
+}
+.container-contato a:link{
+  color: #FFF;
+  border-bottom: 2.5px dashed #FFF;
+}
+.container-contato a:visited{
+  color: #FFF;
+}
+.container-contato a:hover {
+  color: #000;
+}
+.container-contato p{
+  font-size: 3em;
+  text-transform: uppercase;
+
+}
+.container-contato img{
+  height: 3em;
+  widows: auto;
+}
+
+
+
 .invi{
   visibility: hidden;
 }
