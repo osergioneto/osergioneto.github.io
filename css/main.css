@@ -97,6 +97,8 @@ body {
   height: auto;
   z-index: -100;
   transform: translate(-50%, -50%);
+  -webkit-filter: hue-rotate(80deg);
+  filter: hue-rotate(325deg) brightness(80%);
 }
 
 .band-b {
@@ -147,6 +149,7 @@ body {
   margin: 0;
   padding: 30px;
   overflow: auto;
+  background: #0e0e0e;
 }
 .nav ul {
   margin: 0;
@@ -250,7 +253,11 @@ body {
   z-index: 100;
 }
 
-
+/*Bio*/
+#texto-bio{
+  font-size: 1.6em;
+  
+}
 
 /*Experiencia*/
 .container-experiencia{
