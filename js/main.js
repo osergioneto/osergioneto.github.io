@@ -9,3 +9,7 @@ $(".menu").on("click", function () {
         $(".l-site").addClass("is-open");
     }
 });
+
+$(window).on('resize', function () {
+    $('.sumiu').toggleClass('.invi', $(window).width() < 1024);
+});

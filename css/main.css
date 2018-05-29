@@ -259,6 +259,13 @@ body {
   
 }
 
+#seta-bio{
+  margin: 25vh auto 0 auto;
+  display: block;
+  height: 15%;
+  width: auto;
+}
+
 /*Experiencia*/
 .container-experiencia{
   display: block;
@@ -362,5 +369,9 @@ body {
 
   .band-container {
     padding: 0 1.5em;
+  }
+
+  .invi{
+    display: none;
   }
 }
