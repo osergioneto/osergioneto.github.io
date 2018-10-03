@@ -1,0 +1,55 @@
+/*===================================*/
+/* BLOG CAIXAS PRODUTOS RELACIONADOS */
+
+.blog-prodRel-boxProd {
+	text-align: center;
+	background-color: #dfe4ea;
+}
+.blog-prodRel-boxProd h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	margin-bottom: .3rem;
+}
+.blog-prodRel-boxProd h1 {
+	font-weight: 600;
+	font-size: .8rem;
+	margin-bottom: .5rem;
+	color: #fa8231;
+}
+.blog-prodRel-boxProd h2 {
+	font-size: 1.5rem;
+	color: #fa8231;
+}
+.blog-prodRel-boxProd h3 {
+	font-size: 1rem;
+	text-decoration: line-through;
+}
+.blog-prodRel-boxProd h4 {
+	font-size: 1rem;
+}
+.blog-prodRel-boxProd a {
+	color: inherit;
+}
+.blog-prodRel-boxProd-img {
+	/*max-width: 85px;*/
+	max-height: 85px;
+	width: auto;
+}
+.blog-prodRel-boxProd-control {
+	background-color: black;
+	height: 5rem;
+}
+.blog-prodRel-boxProd-indicators li {
+	background-color: #5a5a5a;
+}
+.blog-prodRel-boxProd-indicators .active {
+	background-color: black;
+}
+.blog-prodRel-boxProd-boxCarousel img {
+	max-height: 150px;
+	text-align: center;
+}
+.blog-prodRel-boxProd-boxDescr {
+	background-color: #f1f2f6;
+}
+/* FIM BLOG CAIXAS PRODUTOS RELACIONADOS */
+/*=======================================*/

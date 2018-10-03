@@ -1,0 +1,229 @@
+/* CORES PADRÃO
+
+cinza 1 (clouds) >	 		#ecf0f1
+cinza 2 (silver) >			#bdc3c7
+cinza 3 (concrete) >		#95a5a6
+cinza 4 (abestos) >			#7f8c8d
+
+cinza 5 (wet asphalt) >		#34495e
+cinza 6 (midnight blue) >	#2c3e50
+
+https://flatuicolors.com/palette/defo
+*/
+
+/* =====================*/
+/* ===== CARRINHO ===== */
+
+#eComm-carrinho {font-family: 'Roboto', sans-serif!important;}
+
+/*STEP PROGRESS BAR*/
+.bs-wizard {margin-top: 20px;}
+
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: .7rem;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #dadada; top: 25px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fff; border-radius: 50px; position: absolute; top: 8px; left: 8px; } 
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #dadada;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+
+	/*MODIFICAÇÕES NO WIZARD-STEP*/
+	.bs-wizard > .bs-wizard-step.complete > .bs-wizard-dot {background: #28a745;}
+	.bs-wizard > .bs-wizard-step.active > .bs-wizard-dot {background: #aabfaf;}
+	.bs-wizard > .bs-wizard-step > .progress > .progress-bar{background: #28a745;}
+
+/*FIM STEP PROGRESS BAR*/
+
+
+
+
+
+
+/*CARRINHO NAVBAR*/
+.eComm-carrinho-navHead {
+	background-color: #ecf0f1;
+	border-bottom: 1px solid #bdc3c7;
+}
+.eComm-carrinho-navHead img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.eComm-carrinho-navHead h1, h2, h3 {
+	margin: 0px;
+	text-align: center;
+}
+.eComm-carrinho-navHead h1 {
+	font-weight: 600;
+	font-size: .85rem;
+}
+.eComm-carrinho-navHead h2 {
+	font-size: .75rem;
+}
+.eComm-carrinho-navHead h3 {
+	font-size: .65rem;
+}
+/*FIM CARRINHO NAVBAR*/
+
+
+/*CARRINHOS CAIXAS FORMULARIOS*/
+	/*Head das Caixas*/
+.eComm-carrinho-boxHead {
+	background-color: #ecf0f1; 
+	border-bottom: 1px solid #bdc3c7;
+}
+	/*Conteúdo das caixas*/
+.eComm-carrinho-boxBody {
+	background-color: #fafafa;
+	border: 1px solid #e0e0e0;
+}
+	/*Geral Caixas*/
+.eComm-carrinho-box h1 , .eComm-carrinho-vazio h1 {
+	font-weight: 600;
+	color: #696969;
+	font-size: .9rem;
+	text-align: center;
+	margin: 8px;
+}
+.eComm-carrinho-box h2, .eComm-carrinho-vazio h2 {
+	font-weight: 600;
+	font-size: .85rem;
+	color: #2b2b2b;
+	margin: 0rem;
+}
+.eComm-carrinho-box h3, .eComm-carrinho-vazio h3 {
+	/*font-weight: 600;*/
+	color: #6f6f6f;
+	font-size: .85rem;
+	margin: 0rem;
+	text-align: center;
+}
+.eComm-carrinho-box h4 {
+	color: #696969;
+	font-size: .85rem;
+	margin: 0rem;
+	text-align: left;
+}
+.eComm-carrinho-box h5 {
+	color: #696969;
+	font-size: .8rem;
+	margin: 0rem;
+}
+.eComm-carrinho-box h6 {
+	font-weight: 600;
+	color: #4b4ff7;
+	font-size: .7rem;
+	margin: 0rem;
+	margin-right: 2rem;
+}
+
+	/*Caixa de alerta pré-venda*/
+.eComm-carrinho-alerta {
+	margin-top: 1rem;
+	padding: 0rem;
+
+	text-align: center;
+	font-size: .85rem;
+}
+.eComm-carrinho-valorTotal {
+	background-color: #ecf0f1;
+}
+
+ 	/*Form*/
+.eComm-carrinho-box .form-group{
+	margin-bottom: .5rem;
+}
+.eComm-carrinho-box .form-group label {
+	margin-bottom: 0rem;
+
+}
+
+	/*Caixa de Imagem do Produto*/
+.eComm-carrinho-prodImg {
+	padding: 10px;
+	text-align: center;
+}
+.eComm-carrinho-prodImg img {
+	width: auto;
+	max-height: 70px;
+}
+
+	/*Revisão Pedido*/
+.eComm-carrinho-ProdRev .boxProdRev img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.eComm-carrinho-boxCustosPedido {
+	border-bottom: 1px solid #e0e0e0;
+}
+.eComm-carrinho-dadosCartao, .eComm-carrinho-dadosPagExt {
+	background-color: #eaeaea;
+}
+
+
+
+
+
+
+.eComm-carrinho-bandCartao img {
+	max-height: calc(3rem + 2px);
+	max-width: 100%;
+}
+.eComm-carrinho-PedRev{
+	background-color: #e8f2ff;
+}
+
+	/*Desabilita Spiner de input type=number de todo o carrinho */
+.eComm-carrinho-spinerOFF input::-webkit-outer-spin-button,
+.eComm-carrinho-spinerOFF input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+	/*Confirmação*/
+.eComm-carrinho-confirmacao h2 {
+	font-size: 2.5rem;
+	color: #288e34;
+}
+.eComm-carrinho-confPed {
+	background-color: #ecf0f1;
+}
+
+	/*Footer*/
+.eComm-carrinho-footer {
+	background-color: #ecf0f1;
+	border-top: 1px solid #bdc3c7;
+	text-align: center;
+}
+.eComm-carrinho-footer-box {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.eComm-carrinho-footer h3 {
+	font-size: .7rem;
+}
+.eComm-carrinho-footer h6 {
+	font-size: .65rem;
+	color: #a7a7a7;
+}
+.eComm-carrinho-footer-box img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.eComm-carrinho-footer-box-bottom {
+	text-align: center;
+}
+
+/* ===== FIM CARRINHO ===== */
+/* =========================*/
