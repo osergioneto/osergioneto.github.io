@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>NOVO CARRINHO 2B - ETAPA 1</title>
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<!-- css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- 2b script-->
+	<script src="js/carrinho_scripts.js"></script>
+
+</head>
+<body id="eComm-carrinho">
+
+<!-- INICIO NAVBAR-->
+	<div class="navbar navbar-light eComm-carrinho-navHead">
+		<div class="container" >
+			<div class="col-md-4 col-xs-12">
+				<a class="navbar-brand" href="#site2B">
+					<img src="img/2b_logo_dark.svg" class="d-inline-block align-top" alt="">
+				</a>
+			</div>
+			<div class="col-4 d-none d-none d-md-block">
+				<h1>ATENDIMENTO</h1>
+				<h2>(71) 3023-2707</h2>
+				<h3>atendimento@editora2b.com.br</h3>				
+			</div>
+			<div class="col-4 d-none d-none d-md-block">
+				<h1>SITE BLINDADO</h1>
+				<h2>100% SEGURO</h2>
+				<h3>Compra Protegida</h3>				
+			</div>
+		</div>
+	</div>
+<!-- FIM NAVBAR-->
+
+<!-- INICIO STEP BAR-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-sm-12 offset-md-2">
+		            <div class="row bs-wizard" style="border-bottom:0;">
+		                <div class="col-3 bs-wizard-step active">
+		                  <!--<div class="text-center bs-wizard-stepnum">Step 1</div>-->
+		                  <div class="progress"><div class="progress-bar"></div></div>
+		                  <a class="bs-wizard-dot"></a>
+		                  <div class="bs-wizard-info text-center">CARRINHO</div>
+		                </div>
+		                
+		                <div class="col-3 bs-wizard-step disabled">
+		                  <!--<div class="text-center bs-wizard-stepnum">Step 2</div>-->
+		                  <div class="progress"><div class="progress-bar"></div></div>
+		                  <a class="bs-wizard-dot"></a>
+		                  <div class="bs-wizard-info text-center">DADOS E INFORMAÇÕES</div>
+		                </div>
+		                
+		                <div class="col-3 bs-wizard-step disabled">
+		                  <!--<div class="text-center bs-wizard-stepnum">Step 3</div>-->
+		                  <div class="progress"><div class="progress-bar"></div></div>
+		                  <a class="bs-wizard-dot"></a>
+		                  <div class="bs-wizard-info text-center">PAGAMENTO</div>
+		                </div>
+		                
+		                <div class="col-3 bs-wizard-step disabled">
+		                  <!--<div class="text-center bs-wizard-stepnum">Step 4</div>-->
+		                  <div class="progress"><div class="progress-bar"></div></div>
+		                  <a class="bs-wizard-dot"></a>
+		                  <div class="bs-wizard-info text-center">CONFIRMAÇÃO</div>
+		                </div>
+						<!-- Status possíveis: disabled active complete -->
+
+		            </div>
+			</div>
+		</div>
+	</div>
+<!-- FIM STEP BAR-->
+
+<!-- INICIO CONTEÚDO DA PÁGINA-->
+	<div class="container" id="box-carrinho-all">
+		
+	<!-- BOTÕES TOP-->
+		<div class="col">
+			<div class="row justify-content-between">
+				<button type="button" class="btn btn-outline-danger">VOLTAR</button>
+				<button type="button" class="btn btn-success"><a href="2_dados.html" class="btn-success">CONTINUAR</a></button>				
+			</div>				
+		</div>
+	<!-- FIM BOTÕES TOP-->
+	
+
+		<div class="row py-3">
+			<div class="col-lg-7 col-md-7 col-sm-12 my-1 eComm-carrinho-box">
+				<div class="container eComm-carrinho-boxBody rounded">
+					<div class="row rounded eComm-carrinho-boxHead">
+						<div class="col align-self-center">
+							<h1>PRODUTOS</h1>
+						</div>
+					</div>
+
+					<!-- INICIO BOX-PROD GENÉRICO-->
+					<div class="container eComm-carrinho-box-prod my-2 box-Prod-1">
+						<div class="row justify-content-end"><button type="button" id="1" class="btn btn-sm btn-danger fas fa-sm fa-trash deleteProdBox"></button></div>
+						<div class="row">
+							<div class="eComm-carrinho-prodImg col-4">
+								<img src="img/sample_livro.png" alt="">
+							</div>
+							<div class="nomeProduto col-8 align-self-center">
+								<h2>Super Preparatório Exame de Suficiência do CFC - Edição 2018</h2>
+							</div>
+						</div>
+						<div class="row my-2">
+
+							<div class="col-12 col-md-4">
+								<div class="col-8 offset-2 col-md-12 offset-md-0 p-0">
+
+									<h4 class="my-2 text-center">Quantidade</h4>
+
+									<div class="input-group">
+									  <span class="input-group-btn">
+									      <button type="button" class="btn btn-sm btn-default btn-number" disabled="disabled" data-type="minus" data-field="prodQuant-1">
+									          <span class="fas fa-sm fa-minus"></span>
+									      </button>
+									  </span>
+									  <input type="text" name="prodQuant-1" class="form-control form-control-sm input-number prodQuant text-center" value="1" min="1" max="10">
+									  <span class="input-group-btn">
+									      <button type="button" class="btn btn-sm btn-default btn-number" data-type="plus" data-field="prodQuant-1">
+									          <span class="fas fa-sm fa-plus"></span>
+									      </button>
+									  </span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-4">
+								<h4 class="my-2 text-center">Valor Unit.</h4>
+								<h3>R$ <div id="prodValor-1" style="display:inline">89,90</div></h3>
+							</div>
+
+							<div class="col-6 col-md-4">
+								<h4 class="my-2 text-center">Subtotal</h4>
+								<h3 class="text-right bg-white text-success"><strong>R$ <div class="subtotal" id="prodSubtotal-1" style="display:inline">89,90</div></strong></h3>
+							</div>
+						</div>
+
+						<!-- ADICIONAR ALERTA CASO SEJA PRÉ-VENDA-->
+						<div class="alert alert-warning eComm-carrinho-alerta" role="alert">
+							Este produto é uma <strong>pré-venda</strong>.<br>
+							O produto será enviado no dia <strong>31/02/3001</strong>.
+						</div>
+
+						<hr>
+					</div>
+					<!-- FIM BOX PROD GENÉRICO-->
+
+					<div class="container eComm-carrinho-box-prod my-2 box-Prod-2">
+						<div class="row justify-content-end"><button type="button" id="2" class="btn btn-sm btn-danger fas fa-sm fa-trash deleteProdBox"></button></div>
+						<div class="row">
+							<div class="eComm-carrinho-prodImg col-4">
+								<img src="img/sample_livro_2.png" alt="">
+							</div>
+							<div class="nomeProduto col-8 align-self-center">
+								<h2>Super Preparatório Exame de Suficiência do CFC - Edição 2018</h2>
+							</div>
+						</div>
+						<div class="row my-2">
+
+							<div class="col-12 col-md-4">
+								<div class="col-8 offset-2 col-md-12 offset-md-0 p-0">
+
+									<h4 class="my-2 text-center">Quantidade</h4>
+
+									<div class="input-group">
+									  <span class="input-group-btn">
+									      <button type="button" class="btn btn-sm btn-default btn-number" disabled="disabled" data-type="minus" data-field="prodQuant-2">
+									          <span class="fas fa-sm fa-minus"></span>
+									      </button>
+									  </span>
+									  <input type="text" name="prodQuant-2" class="form-control form-control-sm input-number prodQuant text-center" value="1" min="1" max="10">
+									  <span class="input-group-btn">
+									      <button type="button" class="btn btn-sm btn-default btn-number" data-type="plus" data-field="prodQuant-2">
+									          <span class="fas fa-sm fa-plus"></span>
+									      </button>
+									  </span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-4">
+								<h4 class="my-2 text-center">Valor Unit.</h4>
+								<h3>R$ <div id="prodValor-2" style="display:inline">49,90</div></h3>
+							</div>
+
+							<div class="col-6 col-md-4">
+								<h4 class="my-2 text-center">Subtotal</h4>
+								<h3 class="text-right bg-white text-success"><strong>R$ <div class="subtotal" id="prodSubtotal-2" style="display:inline">49,90</div></strong></h3>
+							</div>
+						</div>
+
+						<!-- ADICIONAR ALERTA CASO SEJA PRÉ-VENDA-->
+						<!-- <div class="alert alert-warning eComm-carrinho-alerta" role="alert">
+							Este produto é uma <strong>pré-venda</strong>.<br>
+							O produto será enviado no dia <strong>31/02/3001</strong>.
+						</div> -->
+
+						<hr>
+					</div>
+
+
+					<!-- TOTALIZAÇÃO -->
+					<div class="container">
+						<div class="row justify-content-end">
+							<div class="col-3"><h1>TOTAL:</h1></div>
+							<div class="col-4 rounded eComm-carrinho-valorTotal">
+								<h1 class="text-success text-dark mx-0">R$ <div id="carrinhoTotal" style="display:inline">xx,xx</div></h1>
+							</div>
+						</div>
+					</div>
+					<br>
+					<!-- FIM TOTALIZAÇÃO -->
+
+				</div>
+			</div>
+
+			<div class="col-lg-5 col-md-5 col-sm-12 my-1 eComm-carrinho-box">
+				<div class="container eComm-carrinho-boxBody rounded">
+					<div class="row eComm-carrinho-boxHead rounded">
+						<div class="col align-self-center">
+							<h1>CONSULTA DE FRETE</h1>
+						</div>
+					</div>
+					<br>
+
+					<div class="form-group col-8">
+							    <label for="cliEndCEP"><h4>CEP</h4></label>
+							    <input type="text" class="form-control form-control-sm" id="cliEndCEP" placeholder="Digite seu CEP" maxlength="8">
+					</div>
+					<br>
+
+					<!-- INICIO OPÇÃO FRETE GENÉRICA -->
+					<div class="row align-items-center">
+						<div class="col-4">
+							<h3>Retirar na loja</h3>							
+						</div>
+						<div class="col-3">
+							<h3>Grátis</h3>
+						</div>
+						<div class="col-5">
+							<h3>até 30 minutos</h3>
+						</div>
+					</div>
+					<hr>
+					<!-- INICIO OPÇÃO FRETE GENÉRICA -->
+
+					<div class="row align-items-center">
+						<div class="col-4">
+							<h3>Frete Normal</h3>							
+						</div>
+						<div class="col-3">
+							<h3>R$ 9,90</h3>
+						</div>
+						<div class="col-5">
+							<h3>10 dias úteis</h3>
+						</div>
+					</div>
+					<hr>
+					<div class="row align-items-center">
+						<div class="col-4">
+							<h3>Frete Rápido</h3>							
+						</div>
+						<div class="col-3">
+							<h3>R$ 19,90</h3>
+						</div>
+						<div class="col-5">
+							<h3>5 dias úteis</h3>
+						</div>
+					</div>
+					<hr>
+					<div class="row align-items-center">
+						<div class="col-4">
+							<h3>Frete Aéreo</h3>							
+						</div>
+						<div class="col-3">
+							<h3>R$ 29,90</h3>
+						</div>
+						<div class="col-5">
+							<h3>2 dias úteis</h3>
+						</div>
+					</div>
+					<hr>
+
+					
+					<div class="alert alert-light eComm-carrinho-alerta" role="alert">
+						* Prazos estimados.
+					</div>
+
+					<!-- ADICIONAR ALERTA CASO EXISTA UMA COMPRA DE PRÉ-VENDA -->
+					<div class="alert alert-warning eComm-carrinho-alerta" role="alert">
+						Nos produtos em pré-venda, este prazo só começa a correr após a data de postagem informada.
+					</div>					
+					
+
+					
+					
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- BOTÕES BOTTON-->
+		<div class="col">
+			<div class="row justify-content-end">
+				<button type="button" class="btn btn-success"><a href="2_dados.html" class="btn-success">CONTINUAR</a></button>				
+			</div>				
+		</div>
+		<br>
+	</div>
+<!-- FIM CONTEÚDO DA PÁGINA-->
+	<div class="container mt-3 mb-5 d-none" id="box-carrinho-off">
+		<div class="col-12 col-md-8 offset-md-2 my-1 eComm-carrinho-vazio">
+			<div class="container eComm-carrinho-boxBody rounded">
+				<div class="row rounded eComm-carrinho-boxHead">
+					<div class="col align-self-center">
+						<h1>CARRINHO VAZIO</h1>
+					</div>
+				</div>
+				<br>
+				<br>
+				<h3>O carrinho está vazio. Volte para o site e continue comprando.</h3>
+				<br>
+				<div class="row justify-content-center">
+					<button type="button" class="btn btn-primary">Voltar para o Site</button>
+				</div>
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- INICIO FOOTER-->
+		<div class="navbar eComm-carrinho-footer">
+			<div class="container">
+				
+				<div class="eComm-carrinho-footer-box col-12 col-md-4">
+					<h3><strong>FORMAS DE PAGAMENTO</strong></h3>
+					<img src="img/pag/box_pagamento_60i_web.png">				
+				</div>
+
+				<div class="eComm-carrinho-footer-box col-6 col-md-4">
+					<br>
+					<h3><strong>ATENDIMENTO</strong></h3>
+					<h3>(71) 3023-2707</h3>
+					<h3>atendimento@editora2b.com.br</h3>			
+				</div>
+
+				<div class="eComm-carrinho-footer-box col-6 col-md-4">
+					<br>
+					<img src="img/comodo_secure_lg.png">
+					<h6>• Site seguro com criptografia (SSL) • <br>Homologado pela <strong>Comodo</strong></h6>				
+				</div>
+			</div>
+
+			<div class="eComm-carrinho-footer-box-bottom col-12">
+				<hr>
+				
+				<h6>© 2018 - Todos os Direitos Reservados<br>
+				R. Dr. José Peroba, 275 - Stiep<br>
+				Metropolis Empresarial, Sala 109/110<br>
+				CEP 41770-235 | Salvador - BA - Brasil<br>
+				Editora 2B LTDA - ME. CNPJ: 28.575.649/0001-50</h6>
+			</div>
+		</div>
+	<!-- FIM FOOTER-->
+
+
+
+
+	<script>
+		//execução inicial
+		$(document).ready(function(){
+			checkCarrinhoVazio();
+			totalizarCarrinho1();
+		});
+	</script>
+</body>
+</html>
