@@ -1,0 +1,308 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bancos de Dados NoSQL</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section><h2>Análise de Performance - NoSQL (MongoDB)</h2></section>
+
+				<section>
+					<section>
+						<h1>Resumo Bancos Relacionais</h1>
+					</section>
+					<section>
+						<ul>
+							<li>Armazenam dados na forma de tabelas (linhas e colunas);</li>
+							<li>As tabelas se relacionam;</li>
+							<li>Usam SQL como linguagem de consulta;</li>
+						</ul>											
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Resumo Bancos NoSQL</h1>
+					</section>
+					<section>
+						<ul><li> <h2>Não são relacionais</h2></li></ul>
+						<br>
+						As relações não são obrigatórias mas podem ocorrer, isso torna os bancos NoSQL mais performáticos em grandes volumes de dados.								
+					</section>
+					<section>
+						<ul><li> <h4>Possuem diferentes modelos/formas de armazenamento de dados</h4></li></ul>
+						<br>
+						Enquanto os bancos SQL armazenam os dados nas formas de tabelas (linha e coluna) os bancos NoSQL tem outras formas de armazenar. Alguns desses modelos são: Grafos, Documentos, Colunas e Chave-Valor								
+					</section>
+					<section>
+						<ul><li> <h3>Esquemas de dados flexíveis</h3></li></ul>
+						<br>
+						Dentro de um mesmo conjunto de dados eles podem possuir formatos diferentes, por exemplo: nos bancos orientados a documentos podem possuir dentro de uma mesma coleção documentos com diferentes propriedades.								
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Principais tipos de Banco de Dados NoSQL</h2>
+					</section>
+					<section>
+						<ul>
+							<li><strong>Colunas:</strong> mais próximos dos bancos relacionais. Armazenam dados em formas de colunas no lugar de linhas, as colunas podem ter subcolunas que possuem propriedades.</li>
+							<li><strong>Chave-valor:</strong> se assemelham a um dicionário. Cada dado tem uma chave que o identifica e o seu valor que contém</li>
+						</ul>											
+					</section>
+					<section>
+						<ul>
+							<li><strong>Grafos:</strong> grafos são estruturas de dados que possuem vértices e arestas em que as arestas interligam os vértices. Nos bancos de dados os vértices e arestas representam os dados e as relações existentes.</li>
+							<li><strong>Documentos:</strong> armazenam os registros em formas de documentos, normalmente JSON ou XML.</li>
+						</ul>											
+					</section>
+					<section>
+						<img src="img/nosql-database-family.jpg" alt="">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>SQL vs NoSQL</h1>
+					</section>
+					<section>
+						<ul>
+							<li><h4>Dificuldades para modelar bancos complexos de forma relacional</h4></li>
+						</ul>	
+						<br>
+						Ex.: Redes sociais (possuem comentários, videos, imagens, marcações, entre outras coisas)										
+					</section>
+					<section>
+						<ul>
+							<li><h3>Esquemas rígidos <br> x <br> Esquemas flexíveis</h3></li>
+						</ul>											
+					</section>
+					<section>
+						<ul>
+							<li><h2>Diferenças para escalar</h2></li>
+						</ul>		
+						<br>
+						<p>As bases de dados <strong>SQL</strong>  são verticalmente escaláveis, o que significa que para aumentar o carregamento em um servidor é necessário melhorar o hardware.</p>
+						<p>As bases de dados <strong>NoSQL</strong> , por sua vez, são horizontalmente escaláveis. E possivel suportar mais tráfego adicionando mais servidores na sua base de dados NoSQL.</p>									
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Quando usar cada um?</h2>
+					</section>
+					<section>
+						<h2>Banco SQL</h2>
+						<p>Bancos <strong>SQL</strong>  são uma boa escolha negócios que vão se beneficiar de sua estrutura e esquema pré-definidos. Por exemplo, aplicações que requerem transações de várias linhas — como sistemas de contabilidades ou sistemas que monitoram inventário — ou rodam em sistemas legados</p>											
+					</section>
+					<section>
+						<h2>Banco NoSQL</h2>
+						<p>Os bancos <strong>NoSQL</strong>são uma boa escolha para negócios que têm crescimento rápido ou bases de dados sem definições claras de esquemas. Se você não conseguir definir um esquema para o seu banco de dados, se perceber que está sempre desnormalizando esquemas de dados ou se o seu esquema passa constantemente por mudanças — como costuma ser o caso de apps mobile, análises em tempo real, sistemas de gerenciamento de conteúdo.</p>											
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Análise de Performance</h2>
+					</section>
+					<section>
+						<h2>Criando o banco</h2>
+						<img src="img/1.png" alt="">
+					</section>
+					<section>
+						<h2>Gerando documento (valores) </h2>
+						<img src="img/2.png" alt="">
+					</section>
+					<section>
+						<h2>Gerando documento (valores) </h2>
+						<img src="img/3.png" alt="">
+					</section>
+					<section>
+						<h2>Inserindo valores na coleção Scores </h2>
+						<img src="img/4.png" alt="">
+						<img src="img/5.png" alt="">
+					</section>
+					<section>
+						<h2>Fazendo a primeira busca (para teste) </h2>
+						<img src="img/6.png" alt="">
+						<img src="img/7.png" alt="">
+					</section>
+					<section>
+						<h2>Verificando tempo de busca SEM index </h2>
+						<img src="img/8.png" alt="">
+						<img src="img/9.png" alt="">
+					</section>
+					<section>
+						<h2>Criando index </h2>
+						<img src="img/10.png" alt="">
+						<img src="img/11.png" alt="">
+					</section>
+					<section>
+						<h2>Verificando tempo de busca COM index </h2>
+						<img src="img/8.png" alt="">
+						<img src="img/12.png" alt="">
+					</section>
+					<section>
+						<h2>Indexado vs Não Indexado </h2>
+						<img src="img/15.png" alt="">
+					</section>
+					<section>
+						<h2>Tamanho do arquivo index </h2>
+						<img src="img/13.png" alt="">
+						<img src="img/14.png" alt="">
+						<p>(81.67 MB) de index</p>
+					</section>
+
+				</section>
+
+				<section>
+					<h1>Fim</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+		<!-- Everything below this point is only used for the reveal.js demo page -->
+
+
+
+		<style>
+			/* Social sharing */
+			.share-reveal a {
+				display: inline-block;
+				height: 34px;
+				line-height: 32px;
+				padding: 0 10px;
+				color: #fff;
+				font-family: Helvetica, sans-serif;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 12px;
+				vertical-align: top;
+				text-transform: uppercase;
+				box-sizing: border-box;
+			}
+
+			.share-reveal .share-reveal-editor {
+				line-height: 30px;
+			}
+
+			.share-reveal svg {
+				vertical-align: middle;
+			}
+
+			.share-reveal a + a {
+				margin-left: 10px;
+			}
+
+			.share-reveal-editor {
+				border: 2px solid #fff;
+			}
+
+			.share-reveal-twitter,
+			.share-reveal-follow {
+				background-color: #00aced;
+			}
+
+			.share-reveal-facebook {
+				background-color: #4B71B8;
+			}
+
+		</style>
+
+		<script>
+		var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+		(function(d, t) {
+		var g = d.createElement(t),
+			s = d.getElementsByTagName(t)[0];
+		g.async = true;
+		g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+		})(document, 'script');
+		</script>
+
+		<script>
+			[].slice.call( document.querySelectorAll( '.share-reveal-facebook, .share-reveal-twitter' ) ).forEach( function( element ) {
+				element.addEventListener( 'click', function( event ) {
+					event.preventDefault();
+					var width = 500, height = 300;
+					var winTop = window.screenY + (window.screen.height / 2) - (height / 2);
+					var winLeft = window.screenX + (window.screen.width / 2) - (width / 2);
+					window.open(this.href, 'shre', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + width + ',height=' + height);
+				} );
+			} );
+
+			if( !navigator.userAgent.match( /(iphone|android)/gi ) && !!document.querySelector ) {
+				document.querySelector( '.share-reveal' ).style.display = 'block';
+				document.querySelector( '.fork-reveal' ).style.display = 'block';
+			}
+		</script>
+
+	</body>
+</html>
