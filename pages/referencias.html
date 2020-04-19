@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="icon" href="https://avatars1.githubusercontent.com/u/17184941?v=4" type="image/png"></head>
 
   <body>
@@ -45,9 +45,14 @@
           <i class="fas fa-envelope"></i>
           &nbsp; null</span>
         <span style="display:block;">
-          <i class="far fa-newspaper"></i>
+          <i class="fas fa-home"></i>
           &nbsp;
-          <a href="./pages/covid19.html">COVID-19 | Notícias</a>
+          <a href="../index.html">Home</a>
+          </span>
+        <span style="display:block;">
+          <i class="fas fa-list-ol"></i>
+          &nbsp;
+          <a href="./covid19.html"">COVID-19 | Notícias</a>
           </span>
         <span style="display:block;">
           <i class="far fa-envelope"></i>
@@ -72,110 +77,22 @@
   </div>
   <div id="display">
     <div id="work">
-      <h1>Trabalhos / Estudos</h1>
-      <div class="projects" id="work_section">
-        <a href="https://github.com/osergioneto/github-compare" target="_blank">
-          <section>
-            <div class="section_title">github-compare</div>
-            <div class="about_section">
-              <span style="display:block;">Aplicação WEB para fazer comparação entre repositórios existentes no Githhub. Quatro categorias são comparadas: stars, forks, open issues e last commit.</span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; JavaScript</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-        <a href="https://github.com/osergioneto/estudos" target="_blank">
-          <section>
-            <div class="section_title">estudos</div>
-            <div class="about_section">
-              <span style="display:block;">Repositório para concentrar os estudos que venho fazendo.</span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; HTML</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-        <a href="https://github.com/osergioneto/UDP-Client-Server" target="_blank">
-          <section>
-            <div class="section_title">UDP-Client-Server</div>
-            <div class="about_section">
-              <span style="display:block;">Correção de questionários utilizando um server udp</span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; JavaScript</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-
-        <a href="https://github.com/osergioneto/go-barber" target="_blank">
-          <section>
-            <div class="section_title">go-barber</div>
-            <div class="about_section">
-              <span style="display:block;">Sistema WEB que faz agendamento de horários com profissionais.
-              </span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; JavaScript</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-
-        <a href="https://github.com/osergioneto/lil-marketplace" target="_blank">
-          <section>
-            <div class="section_title">lil-marketplace</div>
-            <div class="about_section">
-              <span style="display:block;">API REST que simula um marketplace de vendas de produtos online. É possivel registrar um usuário, logar, criar uma propaganda, exibir todas propagandas, exibir uma única propaganda, deletar uma propaganda e atualizar.
-              </span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; JavaScript</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-
-        <a href="https://github.com/osergioneto/osergioneto.github.io" target="_blank">
-          <section>
-            <div class="section_title">osergioneto.github.io</div>
-            <div class="about_section">
-              <span style="display:block;">Site que conta um pouco sobre mim</span>
-            </div>
-            <div class="bottom_section">
-              <span style="display:inline-block;">
-                <i class="fas fa-code"></i>&nbsp; HTML</span>
-              <span>
-                <i class="fas fa-star"></i>&nbsp; 0</span>
-              <span>
-                <i class="fas fa-code-branch"></i>&nbsp; 0</span>
-            </div>
-          </section>
-        </a>
-
+      <h1>COVID-19 | Referências</h1>
+      <div id="references">
+        <ol>
+          <li><a href="http://lattes.cnpq.br/4978322672579487" target="_blank">Lattes do Átila</a></li>
+          <li><a href="https://science.sciencemag.org/content/early/2020/04/14/science.abb5793" target="_blank">Estudo modelando o vai e vem da pandemia nos países temperados;</a></li>
+          <li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30798-4/fulltext" target="_blank">188 testes em andamento e 146 recrutando pacientes;</a></li>
+          <li><a href="https://www.nature.com/articles/d41573-020-00073-5" target="_blank">115 vacinas em desenvolvimento, 78 registradas. 5 em testes clínicos, que é a fase mais avançada.</a></li>
+          <li><a href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-Global-Impact-26-03-2020.pdf" target="_blank">The Global Impact of COVID-19 and Strategies for Mitigation and Suppression</a></li>
+          <li><a href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf" target="_blank">A. Impact of non-pharmaceutical interventions (NPIs) to reduce COVID-19 mortality <br> and healthcare demand.</a></li>
+          <li><a href="https://cmr.asm.org/content/20/4/660" target="_blank">Severe acute respiratory syndrome coronavirus as an agent of emerging and reemerging infection.</a></li>
+          <li><a href="https://doi.org/10.1038/nm.3985" target="_blank">A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence.</a></li>
+          <li><a href="https://www.nature.com/articles/s41591-020-0820-9" target="_blank">The proximal origin of SARS-CoV-2</a></li>
+          <li><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30522-5/fulltext" target="_blank">COVID-19: too little, too late?</a></li>
+          <li><a href="https://jamanetwork.com/journals/jama/fullarticle/2762689" target="_blank">Response to COVID-19 in Taiwan.</a></li>
+          <li><a href="https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(20)30547-X.pdf" target="_blank">Mitigate the effects of home confinement on children during the COVID-19 outbreak.</a></li>
+        </ol>
       </div>
     </div>
     <div id="forks" style="display:none;">
