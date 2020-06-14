@@ -100,6 +100,22 @@ console.log("originalCart: ", originalCart);
 ```
 
 ## Funções de ordem superior
+
+Uma **função de ordem superior** (high order function) é uma função que recebe uma função como argumento ou que retorna uma função. Em Javascript é bem comum utilizarmos dessa funcionalidade, seja utilizando Callbacks ou em funções como map, filter e reduce. 
+
+O exemplo abaixo é do `map()`. O map é uma função disponivel em Arrays, que percorre todos os elementos do vetor aplicando a função que foi passada. Por fim ela retorna uma novo Array do resultado.
+
+```javascript
+const numbers = [1, 4, 9];
+const doubles = numbers.map((num) => {
+  return num * 2;
+});
+
+// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
+```
+
+
+ 
 ## Lazy Evaluation
 ## Closures
 ## Currying
