@@ -113,10 +113,99 @@ const doubles = numbers.map((num) => {
 
 // doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
 ```
-
-
  
 ## Lazy Evaluation
+
+Em teoria de Linguagens de Programação, Lazy Evalutation é uma estratégia de processamento que atrasa a interpreção de uma expressão até que o valor seja necessário. Essa estratégia também ajuda a evitar repetidos processamentos. 
+
+Alguns benefícios do lazy evaluations são:
+- Definir estruturas de controle de fluxo como abstração no lugar das primitivas;
+- Definir estruturas de dados possivelmente infinitas.
+- Ganho de performance ao evitar processamentos desnecessários. 
+
+Exemplo de Lazy Evaluation:
+
+```javascript
+function createLazy(array) {
+  const obj = {};
+  let fns = [];
+  let takeCount = Infinity;
+
+  obj.filter = function(predicate) {
+    fns = fns.concat({filter: predicate});
+    return obj;
+  };
+
+  obj.map = function(iterator) {
+    fns = fns.concat({map: iterator});
+    return obj;
+  };
+
+  obj.take = function(x) {
+    if (x < takeCount) {
+      takeCount = x;
+    }
+    return obj;
+  };
+
+  obj.value = function() {
+    let results = [];
+
+    const hash = {
+      filter: function(predicate, value) {
+        return predicate(value);
+      },
+      map: function(iterator, value) {
+        return iterator(value);
+      }
+    };
+
+    let el, op, cb, result;
+    for (let i = 0; i < array.length && results.length < takeCount; i += 1) {
+      el = array[i];
+      for (let j = 0; j < fns.length; j += 1) {
+        op = Object.keys(fns[j])[0];
+        cb = fns[j][op];
+        if (op === 'filter') {
+          result = hash[op](cb, el);
+          if (result) {
+            continue;
+          }
+          break;
+        }
+        else if (op === 'map') {
+          result = hash[op](cb, el);
+          results = results.concat(result);
+        }
+      }
+    }
+ 
+    return results;
+  };
+ 
+  return obj;
+}
+
+// ============================================ //
+
+const array = [
+ 1, 2, 3, 4, 5,
+ 6, 7, 8, 9, 10,
+ 11,12,13,14,15,
+ 16,17,18,19,20
+];
+
+const results = createLazy(array)
+ .filter(x => x % 2 === 0)
+ .map(x => x * x)
+ .take(5);
+
+results.value();
+// => [4, 16, 36, 64, 100]
+```
+
 ## Closures
+
+
 ## Currying
 
