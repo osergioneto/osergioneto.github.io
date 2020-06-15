@@ -206,6 +206,27 @@ results.value();
 
 ## Closures
 
+Uma closure é uma função que se "lembra" do ambiente — ou escopo léxico — em que ela foi criada. 
+
+```javascript
+function saveOutput(func, magicWord) {
+	let data = {};
+  
+  function innerFunction(num) {
+		if(num === magicWord) return data;
+    return data[num] = func(num);
+  }
+  
+  return innerFunction;
+}
+
+const multiplyBy2 = (num) => { return num * 2; };
+const multBy2AndLog = saveOutput(multiplyBy2, 'boo');
+
+console.log(multBy2AndLog(2)); // => imprime 4
+console.log(multBy2AndLog(9)); // => imprime 18
+console.log(multBy2AndLog('boo')); // => imprime { 2: 4, 9: 18 }
+```
 
 ## Currying
 
