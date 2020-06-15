@@ -162,7 +162,19 @@
 									return num * 2;
 								});
 
-								// doubles é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
+								// double é agora [2, 8, 18]. numbers ainda é [1, 4, 9]
+
+								// Função para colocar letras maiusculas em nomes
+								function capitalize(sentence: string) {
+									return sentence
+										.split(" ")
+										.map(x => x.toLowerCase())
+										.map(lower => (lower.length > 3 ? lower.replace(/^\w/, c => c.toUpperCase()) : lower))
+										.join(" ");
+								}
+
+								capitalize("sergio deusdedith de araujo neto");
+								// "Sergio Deusdedith de Araujo Neto"
 							</code>
 						</pre>
 					</section>
@@ -264,6 +276,12 @@
 								results.value();
 								// => [4, 16, 36, 64, 100]
 							</code>
+
+							<aside class="notes">
+								Um exemplo para aplicação de lazy evaluation seria filtrar um array de 100 de valores que veio de uma 
+								API porém que só iremos utilizar os primeiros 20. No exemplo com lazy evaluation, determinamos quantos elementos
+								queremos percorrer, no lugar de percorrer tudo.
+							</aside>
 						</pre>
 					</section>
 				</section>
@@ -361,6 +379,11 @@
 								const careersLoginURL = createCareersURL("login");
 							</code>
 						</pre>
+						<aside class="notes">
+							Motivos para utilizar o Currying:
+							- Remover repetição do código
+							- Isolar processos custosos
+						</aside>
 					</section>
 				</section>
 				<section data-background="img/cat.gif">
