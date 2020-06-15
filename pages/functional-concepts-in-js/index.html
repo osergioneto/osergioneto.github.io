@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section><h1>Inicio</h1></section>
+					<section>
+						<h2>Indice</h2>
+						<ul>
+							<li>Funções puras</li>
+							<li>Funções de ordem superior</li>
+							<li>Lazy Evaluation</li>
+							<li>Closures</li>
+							<li>Currying</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Funções Puras</h1>
+					</section>
+					<section>
+						<h3>Funções Puras</h3>
+						<strong>Funções Puras</strong> são funções que não dependem de outras funções e não alteram o estado da aplicação, fora do seu escopo. Elas não causam efeitos colaterais.
+					</section>
+					<section>
+						<h3>Funções Puras</h3>
+						As funções puras sempre retornam o mesmo valor quando dados as mesmas entradas. A sua execução não depende do estado do sistema.
+					</section>
+					<section>
+						<h3>Exemplo de Função Impura</h3>
+						<pre>
+							<code data-trim data-noescape>
+								function impureAddToCart(cart, item, quantity) {
+									cart.push({
+										item,
+										quantity
+									});
+									return cart;
+								};
+								
+								const originalCart = [];
+
+								const cart = impureAddToCart(
+									originalCart,
+									{
+										 name: "Digital SLR Camera",
+										 price: '1495'
+									},
+									1
+								);
+								
+								console.log("cart: ", cart); 
+								console.log("originalCart: ", originalCart);
+
+								//
+									"cart: ", [{
+										item: {
+											name: "Digital SLR Camera",
+											price: "1495"
+										},
+										quantity: 1
+									}]
+
+									"originalCart: ", [{
+										item: {
+											name: "Digital SLR Camera",
+											price: "1495"
+										},
+										quantity: 1
+									}]
+								//
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Exemplo de Função Pura</h3>
+						<pre>
+							<code data-trim data-noescape>
+								function pureAddToCart(cart, item, quantity) {
+									const newCart = [...cart];
+									
+									newCart.push({
+										item,
+										quantity
+									});
+									return newCart;
+								};
+								
+								const originalCart = [];
+								const cart = pureAddToCart(
+									originalCart,
+									{
+										 name: "Digital SLR Camera",
+										 price: '1495'
+									},
+									1
+								);
+								
+								console.log("cart: ", cart);
+								console.log("originalCart: ", originalCart);
+								
+								//
+									"cart: ", [{
+										item: {
+											name: "Digital SLR Camera",
+											price: "1495"
+										},
+										quantity: 1
+									}]
+								
+									"originalCart: ", []
+								//
+							</code>
+						</pre>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
