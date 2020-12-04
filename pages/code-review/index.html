@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h1>Code Review - pelo Google</h11>
+				</section>
+				<section>
+					<h2>Indice</h2>
+					<ul>
+						<li>Introdução</li>
+						<li>O padrão do Code Review</li>
+						<li>O que olhar em um Code Review</li>
+						<li>Navegando os arquivos em Code Review</li>
+						<li>Velocidade de um Code Review</li>
+						<li>Como escrever comentários</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h1>Introdução</h1>
+			</section>
+			<section>
+				<section>
+					<h1>O padrão do Code Review</h1>
+				</section>
+				<section>
+					<h3>Mentorando</h3>
+					O code review pode ter uma função importante para ensinar algo novo aos desenvolvedores, seja uma
+					linguagem, um framework ou conceitos de engenharia de software.
+				</section>
+				<section>
+					<h2>Principios</h2>
+					<ul>
+						<li>Os fatos técnicos e os dados anulam as opiniões e preferências pessoais.</li>
+						<li>Estilo de código</li>
+						<li>Aspectos de design de software quase nunca são uma questão puramente de estilo ou apenas uma
+							preferência pessoal.</li>
+						<li>Seja consistente</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Rsolvendo conflitos</h3>
+					<ul>
+						<li>CONSENSO</li>
+						Não deixe um PR ficar parado porque o autor e o revisor não concordam.
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>O que olhar em um Code Review</h1>
+				</section>
+				<section>
+					<h3>O que olhar em um Code Review</h3>
+					<ul>
+						<li>Design</li>
+						<li>Funcionalidade</li>
+						<li>Complexidade</li>
+						<li>Testes</li>
+						<li>Nomeação</li>
+						<li>Comentários</li>
+						<li>Documentação</li>
+						<li>Todas linhas</li>
+						<li>Contexto</li>
+						<li>Coisas boas</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Design</h3>
+					<ul>
+						<li>As interações de várias partes do código no CL fazem sentido?</li>
+						<li>Essa alteração pertence à sua base de código ou a uma biblioteca?</li>
+						<li>Ele se integra bem com o resto do seu sistema?</li>
+						<li>Ele se integra bem com o resto do seu sistema?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Funcionalidade</h3>
+					<ul>
+						<li>Este Pull Request faz o que o desenvolvedor pretendia?</li>
+						<li>O que o desenvolvedor pretendia é bom para os usuários deste código?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Complexidade</h3>
+					<ul>
+						<li>O código é mais complexo do que deveria? </li>
+						<li>As linhas são muito complexas?</li>
+						<li>As funções são muito complexas? </li>
+						<li>As classes são muito complexas?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Testes</h3>
+					<ul>
+						<li>Os testes realmente falharão quando o código for quebrado?</li>
+						<li>Se o código mudar abaixo deles, eles começarão a produzir falsos positivos? </li>
+						<li>Cada teste fazem validações simples e úteis?</li>
+						<li>Os testes são separados adequadamente entre diferentes funções de teste?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Nomeação</h3>
+					<ul>
+						<li>O desenvolvedor escolheu bons nomes para tudo?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Nomeação</h3>
+					<ul>
+						<li>O desenvolvedor escreveu comentários claros em inglês compreensível?</li>
+						<li>Todos os comentários são realmente necessários?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Documentação</h3>
+					<ul>
+						<li>Atualizar/excluir documentação</li>
+						<li>Se faltar documentação, peça.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Todas linhas</h3>
+					<ul>
+						<li>Olhe cada linha do PR</li>
+						<li>Não ignore código feito por humano</li>
+						<li>Não presuma qualidade</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Contexto</h3>
+					<section>
+						<section>
+							<h1>O padrão do Code Review</h1>
+						</section>
+						<section>
+							<h3>Mentorando</h3>
+							O code review pode ter uma função importante para ensinar algo novo aos desenvolvedores,
+							seja uma
+							linguagem, um framework ou conceitos de engenharia de software.
+						</section>
+						<section>
+							<h2>Principios</h2>
+							<ul>
+								<li>Os fatos técnicos e os dados anulam as opiniões e preferências pessoais.</li>
+								<li>Estilo de código</li>
+								<li>Aspectos de design de software quase nunca são uma questão puramente de estilo ou
+									apenas uma
+									preferência pessoal.</li>
+								<li>Seja consistente</li>
+							</ul>
+						</section>
+						<section>
+							<h3>Rsolvendo conflitos</h3>
+							<ul>
+								<li>CONSENSO</li>
+								Não deixe um PR ficar parado porque o autor e o revisor não concordam.
+							</ul>
+						</section>
+					</section>
+					<ul>
+						<li>Olhe o contxto geral</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Coisas boas</h3>
+					<ul>
+						<li>Elogie quando encontrar algo bom</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Características de um bom PR</h3>
+					<ul>
+						<li>Elogie quando encontrar algo bom</li>
+						<li>O código tem o design bem feito</li>
+						<li>A funcionalidade é boa para os usuários do código</li>
+						<li>Todas as mudanças na UI são perceptíveis e bonitas</li>
+						<li>Qualquer concorrência é feita de maneira segura</li>
+						<li>O código não é mais complexo do que precisa ser</li>
+						<li>O desenvolvedor não está implementando coisas que ele pode precisar no futuro mas não
+							tem certeza</li>
+						<li>O código tem testes apropriados</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Características de um bom PR</h3>
+					<ul>
+						<li>O desenvolvedor usa nomes apropriados para tudo</li>
+						<li>Comentários são simples e úteis. Geralmente explicam o "porque" e não o "o que"</li>
+						<li>O código está documentado</li>
+						<li>O código está conforme os guias de estilo</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Navegando os arquivos em Code Review</h1>
+				</section>
+				<section>
+					<h3>Navegando os arquivos em Code Review</h3>
+					<ol>
+						<li>A mudança faz sentido? Tem uma boa descrição?</li>
+						<li>Primeiro olhe a parte mais importante da mudança. Em geral é bem projetado?</li>
+						<li>Leia o pull request em uma sequência adequeada.</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Passo 1: Tenha uma visão ampla da mudança</h2>
+					<ul>
+						<li>Descrição do PR</li>
+						<li>Estilo de código</li>
+						<li>Aspectos de design de software quase nunca são uma questão puramente de estilo ou apenas uma
+							preferência pessoal.</li>
+						<li>Seja consistente</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Rsolvendo conflitos</h3>
+					<ul>
+						<li>CONSENSO</li>
+						Não deixe um PR ficar parado porque o autor e o revisor não concordam.
+					</ul>
+				</section>
+			</section>
+			<section data-background="img/cat.gif">
+				<h1>Fim</h1>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
